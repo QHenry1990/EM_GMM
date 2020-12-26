@@ -1,6 +1,10 @@
-
+% mothed
+% git add .
+% git commit -m
+% git push -u origin master
+% 
 % test EM_GMM demo
-
+% 参考网址， https://blog.csdn.net/qq_23968185/article/details/70940197
 % GMM-EM算法
 %% generate data
 alpha = [0.3, 0.2, 0.5];
@@ -56,25 +60,19 @@ end
 
 figure; plot(X(:, 1), X(:, 2), '*');
 
+%% processing data
+% row = dimension, column = samples
+init = 3;
+[label, model, llh] = mixGaussEm(X.', init);
+
 
 % % 多维高斯分布模型-随机数的产生，这样生成有问题
 % r1 = mvnrnd(mu(:, 1).', sigma(:,:, 1), 1000);
 % r2 = mvnrnd(mu(:, 2).', sigma(:,:, 2), 1000);
 % r3 = mvnrnd(mu(:, 3).', sigma(:,:, 3), 1000);
-figure; 
-plot(r1(:, 1), r1(:, 2), '+');
-hold on;
-plot(r2(:, 1), r2(:, 2), '*');
-plot(r3(:, 1), r3(:, 2), 'o');
+% figure; 
+% plot(r1(:, 1), r1(:, 2), '+');
+% hold on;
+% plot(r2(:, 1), r2(:, 2), '*');
+% plot(r3(:, 1), r3(:, 2), 'o');
 
-
-
-
-
-
-
-
-%% processing data
-% row = dimension, column = samples
-init = 3;
-[label, model, llh] = mixGaussEm(X.', init);
