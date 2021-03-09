@@ -1,12 +1,16 @@
 # EM_GMM
 EM for GMM, a simple demo
 一些数学公式的说明
-
+更改了一些东西
 GMM模型记录</br>
 一维高斯混合模型
-$$p(x) = \sum_{k=1}^K\alpha_kN(x;\mu_k, \sigma^2_k)$$
+$$
+p(x) = \sum_{k=1}^K\alpha_kN(x;\mu_k, \sigma^2_k)
+$$
 其中
-$$\sum_{k=1}^K\alpha_k = 1$$
+$$
+\sum_{k=1}^K\alpha_k = 1
+$$
 $$N(x;\mu, \sigma^2) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$
 多维高斯混合模型
 $$p(\boldsymbol x) = \sum_{k=1}^K\alpha_kN(\boldsymbol x;\boldsymbol{\mu_k}, \Sigma_k)$$
